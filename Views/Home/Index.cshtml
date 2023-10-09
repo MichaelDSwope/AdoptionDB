@@ -1,0 +1,61 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<a asp-controller ="Animal" asp-action="Index">amnimallist </a>
+
+<div class="row">
+    <div class="text-center">
+        <form asp-controller="Product" asp-action="Index">
+            <div class="input-group mb-3">
+                <input name="searchTerm" type="text" class="form-control" placeholder="Search" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <button type="submit">Submit</button>
+            </div>
+
+            <p>
+                "Thank-you for considering adoption.These dogs need a home.Please enter the type of dog your'e looking for:"
+            </p>
+
+            <div class="card" style="width: 18rem;">
+                <img src="~/img/pug.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="Chester">Chester</h5>
+                    <p class="card-text">Please adopt me.</p>
+                    <a href="#" class="btn btn-primary">Adopt Me Now.</a> 
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img src="~/img/SalemKitten.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h6 class="SalemK">Salem</h6>
+                    <p class="card-text">Please adopt me.</p>
+                    <a href="#" class="btn btn-primary">Adopt Me Now.</a>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img src="~/img/snax.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="Chester">Chester</h5>
+                    <p class="card-text">Please adopt me.</p>
+                    <a href="#" class="btn btn-primary">Adopt Me Now.</a>
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+</div>
+<!--In results action, take in the breed. Once you have it, collect all pets that match that breed and return it to the view.
+In results view, display all animals that match the breed. Each one should contain a button that allows the user to “adopt” 
+the animal. This will call the adopt action that will remove the animal from the database then will bring them back to the index view.
+In add view, create a form that allows the user to add a new animal to the database. On submit,
+send the animal to the addAnimal action. This should add the animal to the Database then redirect them back to the index.-->
+
+
